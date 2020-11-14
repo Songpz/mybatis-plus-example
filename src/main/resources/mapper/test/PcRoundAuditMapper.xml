@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.asiainfo.spzstudy.mapper.PcRoundAuditMapper">
+
+    <select id="selectRound" resultType="com.asiainfo.spzstudy.entity.PcRoundAudit">
+        select * from PC_ROUND_AUDIT where  pcra_id = '1325751789200372085';
+    </select>
+</mapper>

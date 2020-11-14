@@ -1,0 +1,14 @@
+# 应用名称
+spring.application.name=spz-study
+# mysql数据库连接
+spring.datasource.dynamic.primary=oracle
+spring.datasource.dynamic.datasource.oracle.username=audit30dev1
+spring.datasource.dynamic.datasource.oracle.password=audit30dev1
+spring.datasource.dynamic.datasource.oracle.driver-class-name=oracle.jdbc.OracleDriver
+spring.datasource.dynamic.datasource.oracle.url=jdbc:oracle:thin:@10.21.171.220:1521:iap
+spring.datasource.dynamic.datasource.slave_1.username=audit30testa
+spring.datasource.dynamic.datasource.slave_1.password=audit30testa
+spring.datasource.dynamic.datasource.slave_1.driver-class-name=oracle.jdbc.OracleDriver
+spring.datasource.dynamic.datasource.slave_1.url=jdbc:oracle:thin:@10.21.171.220:1521:iap
+#mybatis日志
+mybatis-plus.configuration.log-impl=org.apache.ibatis.logging.stdout.StdOutImpl

@@ -1,0 +1,32 @@
+server:
+  port: 8099
+
+#多数据源配置
+spring:
+  datasource:
+    dynamic:
+      primary: master
+      strict: false
+      datasource:
+        master:
+          url: jdbc:oracle:thin:@10.21.171.220:1521:iap
+          username: audit30dev1
+          password: audit30dev1
+          druid:
+            initial-size: 5
+        slave_1:
+          url: jdbc:oracle:thin:@10.21.16.51:1521:lcfa
+          username: dxnocbak2
+          password: dxnocbak2
+          driver-class-name: oracle.jdbc.OracleDriver
+        slave_2:
+          url: jdbc:mysql://localhost:3306/spz?rewriteBatchedStatements=true&serverTimezone=UTC
+          username: root
+          password: root
+          driver-class-name: com.mysql.jdbc.Driver
+
+#mybatis日志
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  mapper-locations: classpath:mapper/**/*.xml
